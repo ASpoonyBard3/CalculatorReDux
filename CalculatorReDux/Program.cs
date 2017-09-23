@@ -39,7 +39,7 @@ namespace calculator
                 Result = FirstInt / SecondInt;
             else
                 {
-                Operator = "You didn't chose a valid operator."; 
+                UserOperator = "You didn't chose a valid operator."; 
                 }
 
             Console.WriteLine("The result is: " + Result);
