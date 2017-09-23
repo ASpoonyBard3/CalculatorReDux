@@ -13,6 +13,13 @@ namespace calculator
             Console.WriteLine("Welcome to the calculator!");
             //Console.ReadLine();
 
+            //note that Console.Read only takes a single char.
+            
+
+            Console.WriteLine("======================");
+            Console.WriteLine("Please enter the desired operator:" UserOperator);
+            //collect user input and assign to a variable
+
             Console.WriteLine("Enter one Number: ");
             string X = Console.ReadLine();
 
@@ -21,7 +28,19 @@ namespace calculator
 
             int FirstInt = int.Parse(X);
             int SecondInt = int.Parse(Y);
-            int Result = FirstInt * SecondInt;
+            
+            if (UserOperator == "+")
+                Result = FirstInt + SecondInt;
+            else if (UserOperator == "-")
+                Result = FirstInt - SecondInt;
+            else if (UserOperator == "*")
+                Result = FirstInt * SecondInt;
+            else if (UserOperator == "/")
+                Result = FirstInt / SecondInt;
+            else
+                {
+                Operator = "You didn't chose a valid operator."; 
+                }
 
             Console.WriteLine("The result is: " + Result);
             Console.ReadLine();
