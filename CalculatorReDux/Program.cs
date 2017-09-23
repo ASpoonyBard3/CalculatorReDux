@@ -17,33 +17,43 @@ namespace calculator
             
 
             Console.WriteLine("======================");
-            Console.WriteLine("Please enter the desired operator:" UserOperator);
+
             //collect user input and assign to a variable
+           
+            {
 
-            Console.WriteLine("Enter one Number: ");
-            string X = Console.ReadLine();
+                Console.WriteLine("Please enter the desired operator: ");
+                String UserOperator = Console.ReadLine();
 
-            Console.WriteLine("Enter second Number: ");
-            string Y = Console.ReadLine();
+                Console.WriteLine("Enter one Number: ");
+                string X = Console.ReadLine();
 
-            int FirstInt = int.Parse(X);
-            int SecondInt = int.Parse(Y);
-            
-            if (UserOperator == "+")
-                Result = FirstInt + SecondInt;
-            else if (UserOperator == "-")
-                Result = FirstInt - SecondInt;
-            else if (UserOperator == "*")
-                Result = FirstInt * SecondInt;
-            else if (UserOperator == "/")
-                Result = FirstInt / SecondInt;
-            else
+                Console.WriteLine("Enter second Number: ");
+                string Y = Console.ReadLine();
+
+                int FirstInt = int.Parse(X);
+                int SecondInt = int.Parse(Y);
+
+                int Result = 0;
+
+                if (UserOperator == "+")
+                    Result = FirstInt + SecondInt;
+                else if (UserOperator == "-")
+                    Result = FirstInt - SecondInt;
+                else if (UserOperator == "*")
+                    Result = FirstInt * SecondInt;
+                else if (UserOperator == "/")
+                    Result = FirstInt / SecondInt;
+                else
                 {
-                UserOperator = "You didn't chose a valid operator."; 
+                    Result = Result("You didn't chose a valid operator.");
                 }
 
-            Console.WriteLine("The result is: " + Result);
-            Console.ReadLine();
+                Console.WriteLine("The result is: " + Result);
+                Console.ReadLine();
+            }
+
+            
 
 
         }
