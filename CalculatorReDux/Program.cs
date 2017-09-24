@@ -17,17 +17,25 @@ namespace calculator
             
 
             Console.WriteLine("======================");
-
-            //collect user input and assign to a variable
-           
             {
-
-                Console.WriteLine("Please enter the desired operator: ");
+                Console.WriteLine("Please enter the desired operator:+");
                 String UserOperator = Console.ReadLine();
 
-                Console.WriteLine("Enter one Number: ");
+                
+                Console.WriteLine("Enter Numbers: ");
+
+                int[] numbers = new int[];
                 string X = Console.ReadLine();
 
+                
+
+                foreach (var item in collection)
+                {
+
+                }
+
+
+                /*
                 Console.WriteLine("Enter second Number: ");
                 string Y = Console.ReadLine();
 
@@ -35,7 +43,9 @@ namespace calculator
                 int SecondInt = int.Parse(Y);
 
                 int Result = 0;
-
+                
+                
+                /*
                 if (UserOperator == "+")
                     Result = FirstInt + SecondInt;
                 else if (UserOperator == "-")
@@ -44,10 +54,10 @@ namespace calculator
                     Result = FirstInt * SecondInt;
                 else if (UserOperator == "/")
                     Result = FirstInt / SecondInt;
-                else
+                /*else
                 {
                     Result = Result("You didn't chose a valid operator.");
-                }
+                }*/
 
                 Console.WriteLine("The result is: " + Result);
                 Console.ReadLine();
