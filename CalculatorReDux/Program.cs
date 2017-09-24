@@ -4,52 +4,52 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace calculator
+namespace Calculator
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the calculator!");
-            Console.WriteLine("======================");
+            Console.WriteLine("==========================");
 
-            Console.WriteLine("Please enter the desired operator:");
-            String UserOperator = Console.ReadLine();
+            Console.Write("Please enter the operator: ");
+            string UserOperator = Console.ReadLine();
 
-            //why does it work this way??
-            Console.Write("Please enter numbers " + UserOperator + "? ");
-            //the line below takes the userOperator variable from the user and converts it 
-            int count = int.Parse(Console.ReadLine());
+            Console.Write("How many numbers do you want to " + UserOperator + "? ");
+            int Counter = int.Parse(Console.ReadLine());
 
-            int[] numbers = new int[count];
-            for (int index = 0; index < count; index++)
+            int[] numbers = new int[Counter];
+            for (int index = 0; index < Counter; index++)
             {
-                Console.Write("Please enter number " + (index + 1) + ":");
+                Console.Write("Please enter number " + (index + 1) + ": ");
                 numbers[index] = int.Parse(Console.ReadLine());
             }
 
-            int Result = numbers[0];
+            int answer = numbers[0];
 
-            for (int index = 1; index < count; index++)
+            for (int index = 1; index < Counter; index++)
             {
-                if (UserOperator == "+")
+                if (UserOperator == "*")
                 {
-                    Result = Result + Result;
-                }
-                else if (UserOperator == "-")
-                {
-                    Result = Result - Result;
-                }
-                else if (UserOperator == "*")
-                {
-                    Result = Result * Result;
+                    answer = answer * numbers[index];
                 }
                 else if (UserOperator == "/")
                 {
-                    Result = Result / Result;
+                    answer = answer / numbers[index];
                 }
-            }
-            Console.WriteLine("The answer is: " + Result);
+                else if (UserOperator == "+")
+                {
+                    answer = answer + numbers[index];
+                }
+                else if (UserOperator == "-")
+                {
+                    answer = answer - numbers[index];
+                }
+            };
+
+            Console.WriteLine("The answer is: " + answer);
+
             Console.ReadLine();
         }
     }
