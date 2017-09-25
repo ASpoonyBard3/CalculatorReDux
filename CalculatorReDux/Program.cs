@@ -30,7 +30,7 @@ namespace Calculator
 
             int answer = numbers[0]; //declaring new int var, from the start of the numbers arrays 
 
-            for (int index = 1; index < Counter; index++)
+            for (int index = 1; index < Counter; index++) //if statement should form the body of main?
             {
                 if (UserOperator == "*")
                 {
