@@ -18,7 +18,7 @@ namespace Calculator
 
             Console.Write("How many numbers do you want to " + UserOperator + "? ");
             int Counter = int.Parse(Console.ReadLine());
-
+            
             int[] numbers = new int[Counter];
             for (int index = 0; index < Counter; index++)
             {
@@ -52,5 +52,27 @@ namespace Calculator
 
             Console.ReadLine();
         }
+         static void ParseUserNumber()
+        {
+            Console.Write("Please enter a number: ");
+            string Answer = Console.ReadLine();
+            bool valid = false;
+
+
+            while ()
+            if (int.TryParse(Console.ReadLine(), Out Answer))
+            {
+                    valid = double.TryParse(Console.ReadLine(), out Answer)
+            };
+            else
+            {
+                Console.WriteLine("That's not a number\n");
+                return Main();
+            };
+
+
+            int number = int.Parse(Answer);
+        } 
+
     }
 }
